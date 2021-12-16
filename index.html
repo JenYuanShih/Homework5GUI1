@@ -1,0 +1,77 @@
+<!--
+    File: index.html
+    Purpose: GUI Assignment Homework 5. HTML Mockup for a single line scrabble game
+    Author: Jen Yuan Shih (JenYuan_Shih@student.uml.edu)
+    Last Updated: 11/21/2021 9:00PM EST
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stanley's Scrabble Spot</title>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- Div that holds all the element of the scrabble game-->
+    <div id = "game">
+        <h1>Stanley's Scrabble Spot</h1>
+        <!-- HTML holder to update scrabble game data such as score, current word, and remaining tile -->
+        <div id = "scrabbleTracker">
+            <div>
+                <p>Score: </p>
+                <p id = "score">0</p>
+            </div>
+            <div>
+                <p>Word: </p>
+                <p id = "curWord"></p>
+            </div>
+            <div>
+                <p>Remaining Unused Tiles: </p>
+                <p id = "remainingTiles"></p>
+            </div>
+        </div>
+        <!-- HTML holder for the scrabble board, tile pieces can be drop in here-->
+        <div id = "ScrabbleBoard" > 
+            <table CELLSPACING=0>
+                <tr>
+                    <td class = "boardSpace blankSpace"></td>
+                    <td class = "boardSpace doubleWordSpace"></td>
+                    <td class = "boardSpace blankSpace"></td>
+                    <td class = "boardSpace blankSpace"></td>
+                    <td class = "boardSpace blankSpace"></td>
+                    <td class = "boardSpace doubleWordSpace"></td>
+                    <td class = "boardSpace blankSpace"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Option to get next letter and restart the scrabble game -->
+        <div id = "scrabbleControls">
+            <button id = "next">Next</button>
+            <button id = "restart">Restart</button>
+        </div>
+        <!-- HTML holder for the tile rack, tiles will be generate here -->
+        <div id = "tileRack">
+            <div id = "tileHolder">
+            </div>
+        </div>
+        <!-- Rules for the scrabble game -->
+        <div id = "rules">
+            <h2>   Rules</h2>
+            <ul>
+                <li>Except for the first letter, all subsequent letters must be placed directly next to existing word</li>
+                <li>If the word length is longer than 2 letters, tiles in the middle will not be able to move until it becomes the edge tile</li>
+                <li>If the tile being moved on the board will create a disconnect in the word, it will not be moved</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- An currently empty div that will be holding the dynamically generated table from JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/scrabbles.js"></script>
+    <script src="js/scrabbleDatas.js"></script>
+    <script src="js/scrabblesHelpers.js"></script>
+</body>
+</html>

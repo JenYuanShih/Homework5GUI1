@@ -1,0 +1,108 @@
+/*
+File: styles.css
+Purpose: Styling for contents in index.html. Including the scrabble board, the rack and the rules
+Author: Jen Yuan Shih (JenYuan_Shih@student.uml.edu)
+Last Updated: 11/21/2021 9:00PM EST
+*/
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Standarize tile size*/
+.tiles{
+    height: 75px;
+    width: 75px;
+}
+
+/*Setting the background and centering the game to the window*/
+#game{
+    background-color: lightgoldenrodyellow;
+    width: 1000px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+/*adding distance between scrabble data and the scrabble board*/
+#scrabbleTracker{
+    height: 50px
+}
+
+/*displaying each data in paralle*/
+#scrabbleTracker div{
+    margin: 0px 40px 0px 40px;
+    display:inline-block;
+}
+
+#scrabbleTracker div p{
+    display: inline-block;
+}
+
+/*centering the scrabble board*/
+#ScrabbleBoard table{
+    margin: 0 auto 0 auto;
+}
+
+/*Creating border beside each scrabble slot*/
+#ScrabbleBoard td{
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+    width: 90px;
+    height: 90px;
+}
+
+/*Adding board background to corrosponding slot*/
+#ScrabbleBoard .blankSpace{
+    background-image: url(imgs/board/blank_tile_space.png);
+    background-size: 90px 90px;
+}
+
+#ScrabbleBoard .doubleWordSpace{
+    background-image: url(imgs/board/double_word_space.png);
+    background-size: 90px 90px;
+}
+
+
+#scrabbleControls button{
+    margin: 20px 50px 20px 50px;
+    font-size: 20px
+}
+
+/*Adding rack image with formatting*/
+#tileRack{
+    background-image: url(imgs/tile_holder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90%;
+    height: 200px;
+    margin: 0px auto;
+    padding-top: 30px
+}
+
+/*formatting the space where tiles generate*/
+#tileHolder{
+    width: 90%;
+    height: 120px;
+    margin: 0 auto;
+}
+
+#tileRack .tiles{
+    margin: 20px 5px;
+}
+
+/*setting background color and width of rules div*/
+#rules{
+    background-color: burlywood;
+    width: 1000px;
+    margin: 0px auto 0px auto;
+}
+
+#rules h2{
+    margin-bottom: 0px;
+}
+
+#rules ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
